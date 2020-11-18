@@ -1,27 +1,16 @@
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/) 
- [![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--git-E01563.svg)](https://swcarpentry.slack.com/messages/C91JS49HD) 
-
-git-novice
+sc-git
 ==========
 
-An introduction to version control for novices using Git.
-Please see <https://swcarpentry.github.io/git-novice/> for a rendered version of this material,
-[the lesson template documentation][lesson-example]
-for instructions on formatting, building, and submitting material,
-or run `make` in this directory for a list of helpful commands.
+An introduction to version control using Git.
 
-Maintainers:
+The rendered content can be viewed here:
 
-* [Ivan Gonzalez][gonzalez_ivan]: [@iglpdc](https://github.com/iglpdc)
-* [Nima Hejazi][hejazi_nima]: [@nhejazi](https://github.com/nhejazi)
-* [Daisie Huang][huang_daisie]: [@daisieh](https://github.com/daisieh)
-* [Kat Koziar][koziar_kat]: [@kekoziar](https://github.com/kekoziar)
-* [Madicken Munk][munk_madicken]: [@munkm](https://github.com/munkm)
+[https://cemac.github.io/sc-git/](https://cemac.github.io/sc-git/)
 
-[gonzalez_ivan]: https://carpentries.org/instructors/#iglpdc
-[hejazi_nima]: https://carpentries.org/instructors/#nhejazi
-[huang_daisie]: https://software-carpentry.org/team/#huang_daisie
-[koziar_kat]: https://carpentries.org/instructors/#kekoziar
-[munk_madicken]: https://carpentries.org/instructors/#munkm
-[lesson-example]: https://swcarpentry.github.io/lesson-example
+This is a slightly modified version of the Sofware Carpentries git lessons:
 
+[https://github.com/swcarpentry/git-novice](https://github.com/swcarpentry/git-novice)
+
+with some content (branches episode) copied from the Univeristy of Wisconsin Data Science team's version of the lessons:
+
+[https://github.com/UW-Madison-DataScience/git-novice-custom](https://github.com/UW-Madison-DataScience/git-novice-custom)
