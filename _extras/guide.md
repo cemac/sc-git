@@ -160,7 +160,7 @@ working in teams or not, because it is
 Just remember that you can use wildcards and regular expressions to ignore a
 particular set of files in `.gitignore`.
 
-## [Remotes in GitHub]({{ page.root }}{% link _episodes/07-github.md %})
+## [Remotes in GitHub]({{ page.root }}{% link _episodes/08-github.md %})
 
 *   Make it clear that Git and GitHub are not the same thing: Git is an open
     source version control tool, GitHub is a company that hosts Git
@@ -183,7 +183,7 @@ particular set of files in `.gitignore`.
     `git push -u origin master`, will have slightly different output, including
     the line `Branch master set up to track remote branch master from origin by rebasing.`
 
-## [Collaborating]({{ page.root }}{% link _episodes/08-collab.md %})
+## [Collaborating]({{ page.root }}{% link _episodes/09-collab.md %})
 
 *   Decide in advance whether all the learners will work in one shared
     repository, or whether they will work in pairs (or other small groups) in
@@ -251,7 +251,7 @@ particular set of files in `.gitignore`.
 *   Learners may have slightly different output from `git push` and `git pull`
     depending on the version of git, and if upstream (`-u`) is used.
 
-## [Conflicts]({{ page.root }}{% link _episodes/09-conflict.md %})
+## [Conflicts]({{ page.root }}{% link _episodes/10-conflict.md %})
 
 *   Expect the learners to make mistakes. Expect *yourself* to make mistakes.
     This happens because it is late in the lesson and everyone is tired.
@@ -279,9 +279,9 @@ particular set of files in `.gitignore`.
 *  Keep in mind that depending on the Git version used, the outputs for
    `git push` and `git pull` can vary slightly.
 
-## [Open Science]({{ page.root }}{% link _episodes/10-open.md %})
+## [Open Science]({{ page.root }}{% link _episodes/11-open.md %})
 
-## [Licensing]({{ page.root }}{% link _episodes/11-licensing.md %})
+## [Licensing]({{ page.root }}{% link _episodes/12-licensing.md %})
 
 We teach about licensing because questions about who owns what, or can use
 what, arise naturally once we start talking about using public services like
@@ -293,9 +293,9 @@ works (including software documentation and images used in software) but not
 software itself. Creative Commons [recommends][cc-faq-software] a
 software-specific license instead.
 
-## [Citation]({{ page.root }}{% link _episodes/12-citation.md %})
+## [Citation]({{ page.root }}{% link _episodes/13-citation.md %})
 
-## [Hosting]({{ page.root }}{% link _episodes/13-hosting.md %})
+## [Hosting]({{ page.root }}{% link _episodes/14-hosting.md %})
 
 A common concern for learners is having their work publicly available on
 GitHub.  While we encourage open science, sometimes private repos are the
