@@ -25,6 +25,9 @@ services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) o
 [GitLab](https://gitlab.com/) to hold those master copies; we'll explore the pros
 and cons of this in the final section of this lesson.
 
+If you don't already have a GitHub account, you can register for an account at
+[https://github.com/join](https://github.com/join).
+
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitHub, then click on the icon in the top right corner to
 create a new repository called `planets`:
@@ -184,6 +187,10 @@ To https://github.com/vlad/planets.git
 >
 > You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
 > to make Git default to using the terminal for usernames and passwords.
+>
+> Depending on your operating system, different password caching options are
+> available for use with Git. The GitHub documentation covers these options
+> in detail [here](https://help.github.com/en/github/using-git/caching-your-github-password-in-git).
 {: .callout}
 
 Our local and remote repositories are now in this state:
