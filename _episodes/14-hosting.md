@@ -43,6 +43,19 @@ communities already using the same service.
 As an example, Software Carpentry [is on GitHub]({{ site.swc_github }}) where you can find the [source for this
 page](https://github.com/swcarpentry/git-novice/edit/gh-pages/_episodes/13-hosting.md). Anyone with a GitHub account can suggest changes to this text.
 
+[This page](https://about.gitlab.com/blog/2019/01/07/github-offering-free-private-repos-for-up-to-three-collaborators/)
+contains some useful notes for comparing GitHub and GitLab's services.
+
+GitHub has some educational programs for which you may be eligible, see their information
+for [students](https://help.github.com/en/github/teaching-and-learning-with-github-education/applying-for-a-student-developer-pack)
+and [educators or researchers](https://help.github.com/en/github/teaching-and-learning-with-github-education/applying-for-an-educator-or-researcher-discount).
+
+GitHub and GitLab both allow web sites to be automatically created from Git
+repositories. Further details can be found on these web pages:
+
+- [GitHub Pages](https://pages.github.com/)
+- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
+
 GitHub repositories can also be assigned DOIs, [by connecting its releases to
 Zenodo](https://guides.github.com/activities/citable-code/). For example,
 [`10.5281/zenodo.57467`](https://zenodo.org/record/57467) is the DOI that has
