@@ -1,6 +1,6 @@
 ---
 title: Licensing
-teaching: 5
+teaching: 2
 exercises: 0
 questions:
 - "What licensing information should I include with my work?"
