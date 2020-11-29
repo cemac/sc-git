@@ -115,7 +115,7 @@ $ git config --global --unset format.pretty
 
 ## Non-text Files
 
-Recall when we discussed [Conflicts]({{ page.root }}/09-conflict/)
+Recall when we discussed [Conflicts]({{ page.root }}/11-conflict/)
 there was a challenge that asked,
 "What does Git do
 when there is a conflict in an image or some other non-textual file
