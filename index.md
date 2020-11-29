@@ -45,6 +45,8 @@ to be shared can and should be stored in a version control system.
 
 > ## Prerequisites
 >
+> Please make sure you have [installed any required software](https://carpentries.github.io/workshop-template/#git)
+>
 > In this lesson we use Git from the Unix Shell.
 > Some previous experience with the shell is expected,
 > *but isn't mandatory*.
