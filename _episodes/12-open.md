@@ -1,7 +1,7 @@
 ---
 title: Open Science
-teaching: 2
-exercises: 0
+teaching: 5
+exercises: 5
 questions:
 - "How can version control help me make my work more open?"
 objectives:
@@ -97,7 +97,7 @@ by acting as a shareable electronic lab notebook for computational work:
 >
 > Anything that is hosted in a version control repository (data, code, papers, 
 > etc.) can be turned into a citable object. You'll learn how to do this in
-> [lesson 14: Citation]({{ page.root }}{% link _episodes/14-citation.md %}).
+> [the later episode on Citation]({{ page.root }}{% link _episodes/14-citation.md %}).
 {: .callout}
 
 > ## How Reproducible Is My Work?
