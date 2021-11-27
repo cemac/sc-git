@@ -11,6 +11,6 @@ This is a slightly modified version of the Sofware Carpentries git lessons:
 
 [https://github.com/swcarpentry/git-novice](https://github.com/swcarpentry/git-novice)
 
-with some content (branches episode) copied from the Univeristy of Wisconsin Data Science team's version of the lessons:
+with some content (branches episode) copied from the Carpentries Incubator version of the lessons:
 
-[https://github.com/UW-Madison-DataScience/git-novice-custom](https://github.com/UW-Madison-DataScience/git-novice-custom)
+[https://github.com/carpentries-incubator/git-novice-branch-pr](https://github.com/carpentries-incubator/git-novice-branch-pr)
