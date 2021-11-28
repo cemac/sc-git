@@ -25,6 +25,9 @@ services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) o
 [GitLab](https://gitlab.com/) to hold those main copies; we'll explore the pros
 and cons of this in a later episode.
 
+If you don't already have a GitHub account, you can register for an account at
+[https://github.com/join](https://github.com/join).
+
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitHub, then click on the icon in the top right corner to
 create a new repository called `planets`:
@@ -33,9 +36,9 @@ create a new repository called `planets`:
 
 Name your repository "planets" and then click "Create Repository".
 
-Note: Since this repository will be connected to a local repository, it needs to be empty. Leave 
-"Initialize this repository with a README" unchecked, and keep "None" as options for both "Add 
-.gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full 
+Note: Since this repository will be connected to a local repository, it needs to be empty. Leave
+"Initialize this repository with a README" unchecked, and keep "None" as options for both "Add
+.gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full
 explanation of why the repository needs to be empty.
 
 ![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
@@ -78,10 +81,10 @@ Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link referenc
 
 > ## HTTPS vs. SSH
 >
-> We use SSH here because, while it requires some additional configuration, it is a 
-> security protocol widely used by many applications.  The steps below describe SSH at a 
-> minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup 
-> and concepts of SSH and key pairs, and other material supplemental to git related SSH. 
+> We use SSH here because, while it requires some additional configuration, it is a
+> security protocol widely used by many applications.  The steps below describe SSH at a
+> minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup
+> and concepts of SSH and key pairs, and other material supplemental to git related SSH.
 {: .callout}
 
 ![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
@@ -118,25 +121,25 @@ We'll discuss remotes in more detail in the next episode, while
 talking about how they might be used for collaboration.
 
 ## SSH Background and Setup
-Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository. 
+Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository.
 
-We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.  
+We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
 SSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.
 
-You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”  
+You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”
 
 What we will do now is the minimum required to set up the SSH keys and add the public key to a GitHub account.
 
 > ## Advanced SSH
-> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail. 
+> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail.
 {: .callout}
 
-The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it. 
+The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it.
 
 > ## Keeping your keys secure
-> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good 
->  practice to audit your secure shell keys every so often. Especially if you are using multiple 
+> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
+>  practice to audit your secure shell keys every so often. Especially if you are using multiple
 >  computers to access your account.
 {: .callout}
 
@@ -147,18 +150,18 @@ ls -al ~/.ssh
 ~~~
 {: .language-bash}
 
-Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using. 
+Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.
 
-Dracula has not set up SSH on his computer, so his output is 
+Dracula has not set up SSH on his computer, so his output is
 
 ~~~
 ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
 ~~~
 {: .output}
 
-If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
+If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.
 
-Since they don’t exist on Dracula’s computer, he uses this command to create them: 
+Since they don’t exist on Dracula’s computer, he uses this command to create them:
 
 ~~~
 $ ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
@@ -182,7 +185,7 @@ Enter passphrase (empty for no passphrase):
 ~~~
 {: .output}
 
-Now, it is prompting Dracula for a passphrase.  Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option. 
+Now, it is prompting Dracula for a passphrase.  Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option.
 
 ~~~
 Enter same passphrase again:
@@ -211,7 +214,7 @@ The key's randomart image is:
 ~~~
 {: .output}
 
-The "identification" is actually the private key. You should never share it.  The public key is appropriately named.  The "key fingerprint" 
+The "identification" is actually the private key. You should never share it.  The public key is appropriately named.  The "key fingerprint"
 is a shorter version of a public key.
 
 Now that we have generated the SSH keys, we will find the SSH files when we check.
@@ -229,7 +232,7 @@ drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ../
 ~~~
 {: .output}
 
-Now we run the command to check if GitHub can read our authentication.  
+Now we run the command to check if GitHub can read our authentication.
 
 ~~~
 ssh -T git@github.com
@@ -248,9 +251,9 @@ git@github.com: Permission denied (publickey).
 ~~~
 {: .output}
 
-Right, we forgot that we need to give GitHub our public key!  
+Right, we forgot that we need to give GitHub our public key!
 
-First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key. 
+First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key.
 
 ~~~
 cat ~/.ssh/id_ed25519.pub
@@ -262,12 +265,12 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmRA3d51X0uu9wXek559gfn6UFNF69yZjChyBIU2qKI
 ~~~
 {: .output}
 
-Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the 
-settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now, 
+Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the
+settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now,
 you can add the title (Dracula uses the title "Vlad's Lab Laptop" so he can remember where the original key pair
 files are located), paste your SSH key into the field, and click the "Add SSH key" to complete the setup.
 
-Now that we’ve set that up, let’s check our authentication again from the command line. 
+Now that we’ve set that up, let’s check our authentication again from the command line.
 ~~~
 $ ssh -T git@github.com
 ~~~
@@ -288,8 +291,8 @@ $ git push origin main
 ~~~
 {: .language-bash}
 
-Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
-will not prompt for a passphrase. 
+Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it
+will not prompt for a passphrase.
 
 ~~~
 Enumerating objects: 16, done.
@@ -347,6 +350,10 @@ To https://github.com/vlad/planets.git
 >
 > You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
 > to make Git default to using the terminal for usernames and passwords.
+>
+> Depending on your operating system, different password caching options are
+> available for use with Git. The GitHub documentation covers these options
+> in detail [here](https://help.github.com/en/github/using-git/caching-your-github-password-in-git).
 {: .callout}
 
 Our local and remote repositories are now in this state:
@@ -389,30 +396,30 @@ GitHub, though, this command would download them to our local repository.
 > How would you get that same information in the shell?
 >
 > > ## Solution
-> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit 
-> > to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each 
+> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit
+> > to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each
 > > commit.
 > >
-> > When you click on the middle button, you'll see all of the changes that were made in that 
-> > particular commit. Green shaded lines indicate additions and red ones removals. In the shell we 
-> > can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and 
-> > ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences 
+> > When you click on the middle button, you'll see all of the changes that were made in that
+> > particular commit. Green shaded lines indicate additions and red ones removals. In the shell we
+> > can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and
+> > ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences
 > > between those two commits.
 > >
-> > The right-most button lets you view all of the files in the repository at the time of that 
-> > commit. To do this in the shell, we'd need to checkout the repository at that particular time. 
-> > We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to 
-> > look at. If we do this, we need to remember to put the repository back to the right state 
+> > The right-most button lets you view all of the files in the repository at the time of that
+> > commit. To do this in the shell, we'd need to checkout the repository at that particular time.
+> > We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to
+> > look at. If we do this, we need to remember to put the repository back to the right state
 > > afterwards!
 > {: .solution}
 {: .challenge}
 
 > ## Uploading files directly in GitHub browser
 >
-> Github also allows you to skip the command line and upload files directly to 
-> your repository without having to leave the browser. There are two options. 
+> Github also allows you to skip the command line and upload files directly to
+> your repository without having to leave the browser. There are two options.
 > First you can click the "Upload files" button in the toolbar at the top of the
-> file tree. Or, you can drag and drop files from your desktop onto the file 
+> file tree. Or, you can drag and drop files from your desktop onto the file
 > tree. You can read more about this [on this GitHub page](https://help.github.com/articles/adding-a-file-to-a-repository/)
 {: .callout}
 
@@ -425,8 +432,8 @@ GitHub, though, this command would download them to our local repository.
 > record times, and why?
 >
 > > ## Solution
-> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three 
-> > weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the 
+> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three
+> > weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the
 > > last change to the file occurred.
 > {: .solution}
 {: .challenge}
@@ -437,22 +444,22 @@ GitHub, though, this command would download them to our local repository.
 > How is "git push" different from "git commit"?
 >
 > > ## Solution
-> > When we push changes, we're interacting with a remote repository to update it with the changes 
-> > we've made locally (often this corresponds to sharing the changes we've made with others). 
+> > When we push changes, we're interacting with a remote repository to update it with the changes
+> > we've made locally (often this corresponds to sharing the changes we've made with others).
 > > Commit only updates your local repository.
 > {: .solution}
 {: .challenge}
 
 > ## GitHub License and README files
 >
-> In this episode we learned about creating a remote repository on GitHub, but when you initialized 
-> your GitHub repo, you didn't add a README.md or a license file. If you had, what do you think 
+> In this episode we learned about creating a remote repository on GitHub, but when you initialized
+> your GitHub repo, you didn't add a README.md or a license file. If you had, what do you think
 > would have happened when you tried to link your local and remote repositories?
 >
 > > ## Solution
-> > In this case, we'd see a merge conflict due to unrelated histories. When GitHub creates a 
-> > README.md file, it performs a commit in the remote repository. When you try to pull the remote 
-> > repository to your local repository, Git detects that they have histories that do not share a 
+> > In this case, we'd see a merge conflict due to unrelated histories. When GitHub creates a
+> > README.md file, it performs a commit in the remote repository. When you try to pull the remote
+> > repository to your local repository, Git detects that they have histories that do not share a
 > > common origin and refuses to merge.
 > > ~~~
 > > $ git pull origin main
@@ -472,8 +479,8 @@ GitHub, though, this command would download them to our local repository.
 > > ~~~
 > > {: .output}
 > >
-> > You can force git to merge the two repositories with the option `--allow-unrelated-histories`. 
-> > Be careful when you use this option and carefully examine the contents of local and remote 
+> > You can force git to merge the two repositories with the option `--allow-unrelated-histories`.
+> > Be careful when you use this option and carefully examine the contents of local and remote
 > > repositories before merging.
 > > ~~~
 > > $ git pull --allow-unrelated-histories origin main

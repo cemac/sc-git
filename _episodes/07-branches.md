@@ -49,7 +49,7 @@ Then he will merge the branch with the faster script
 into his master branch.
 
 First let's make the python branch.
-We use the same `git branch` command but now add the 
+We use the same `git branch` command but now add the
 name we want to give our new branch
 
 ~~~
@@ -112,11 +112,11 @@ that branch. When we use the command `git checkout <branch_name>`, we are using
 a nickname to checkout a version of the repository that matches the most recent
 commit in that branch (a.k.a. the HEAD of that branch).
 
-Here you can use `git log` and `ls` to see that the history and 
+Here you can use `git log` and `ls` to see that the history and
 files are the same as our `master` branch. This will be true until
 some changes are committed to our new branch.
 
-Now lets make our python script.  
+Now lets make our python script.
 For simplicity sake, we will `touch` the script making an empty file
 but imagine we spent hours working on this python script for our analysis.
 
@@ -239,11 +239,11 @@ $ git branch
 {: .output}
 
 
-We can use `ls` and `git log` to see that this branch is 
+We can use `ls` and `git log` to see that this branch is
 the same as our current `master` branch.
 
 Now we can make `analysis.sh` and add and commit it.
-Again imagine instead of `touch`ing the file we worked 
+Again imagine instead of `touch`ing the file we worked
 on it for many hours.
 
 ~~~
@@ -272,7 +272,7 @@ So it turns out the python `analysis.py` is much faster than `analysis.sh`.
 Let's merge this version into our `master` branch so we can use it for
 our work going forward.
 
-Merging brings the changes from a different branch into 
+Merging brings the changes from a different branch into
 the current branch.
 
 First we must switch to the branch we're merging changes into, `master`.

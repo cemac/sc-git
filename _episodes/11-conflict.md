@@ -164,7 +164,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 The `git pull` command updates the local repository to include those
 changes already included in the remote repository.
-After the changes from remote branch have been fetched, Git detects that changes made to the local copy 
+After the changes from remote branch have been fetched, Git detects that changes made to the local copy
 overlap with those made to the remote repository, and therefore refuses to merge the two versions to
 stop us from trampling on our previous work. The conflict is marked in
 in the affected file:
@@ -538,11 +538,11 @@ Conflicts can also be minimized with project management strategies:
 > >
 > > |order|action . . . . . . |command . . . . . . . . . . . . . . . . . . . |
 > > |-----|-------------------|----------------------------------------------|
-> > |1    | Update local      | `git pull origin main`                     |
+> > |1    | Update local      | `git pull origin main`                       |
 > > |2    | Make changes      | `echo 100 >> numbers.txt`                    |
 > > |3    | Stage changes     | `git add numbers.txt`                        |
 > > |4    | Commit changes    | `git commit -m "Add 100 to numbers.txt"`     |
-> > |5    | Update remote     | `git push origin main`                     |
+> > |5    | Update remote     | `git push origin main`                       |
 > > |6    | Celebrate!        | `AFK`                                        |
 > >
 > {: .solution}
