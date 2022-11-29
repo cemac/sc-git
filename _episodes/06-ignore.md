@@ -105,7 +105,7 @@ nothing to commit, working directory clean
 ~~~
 {: .output}
 
-As a bonus, using `.gitignore` helps us avoid accidentally adding to the repository files that we don't want to track:
+As a bonus, using `.gitignore` helps us avoid accidentally adding files to the repository that we don't want to track:
 
 ~~~
 $ git add a.dat
@@ -265,7 +265,7 @@ nothing to commit, working directory clean
 >
 > Let us assume you have many `.dat` files in different subdirectories of your repository.
 > For example, you might have:
->
+> 
 > ~~~
 > results/a.dat
 > data/experiment_1/b.dat
@@ -273,19 +273,19 @@ nothing to commit, working directory clean
 > data/experiment_2/variation_1/d.dat
 > ~~~
 > {: .language-bash}
->
+> 
 > How do you ignore all the `.dat` files, without explicitly listing the names of the corresponding folders?
->
+> 
 > > ## Solution
 > >
 > > In the `.gitignore` file, write:
-> >
+> > 
 > > ~~~
-> > **/*.dat
+> > **/*.dat               
 > > ~~~
 > > {: .output}
 > >
-> > This will ignore all the `.dat` files, regardless of their position in the directory tree.
+> > This will ignore all the `.dat` files, regardless of their position in the directory tree. 
 > > You can still include some specific exception with the exclamation point operator.
 > {: .solution}
 {: .challenge}

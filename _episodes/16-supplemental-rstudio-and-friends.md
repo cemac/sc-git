@@ -24,14 +24,14 @@ development of the project over time, to be able to revert to previous
 versions, and to collaborate with others, we version control the Rstudio
 project with Git. To get started using Git in RStudio, we create a new project:
 
-![](../fig/RStudio_screenshot_newproject.png)
+![RStudio screenshot showing the file menu dropdown with "New Project..." selected](../fig/RStudio_screenshot_newproject.png)
 
-This will open a dialog asking us how we want to create the project. We have
+This opens a dialog asking us how we want to create the project. We have
 some options here. Let's say that we want to use RStudio with the planets
 repository that we already made. Since that repository lives in a directory on
 our computer, we choose the option "Existing Directory":
 
-![](../fig/RStudio_screenshot_existingdirectory.png)
+![RStudio screenshot showing New Project dialog window with "Create project from existing directory" selected](../fig/RStudio_screenshot_existingdirectory.png)
 
 > ## Do You See a "Version Control" Option?
 >
@@ -40,32 +40,34 @@ our computer, we choose the option "Existing Directory":
 > create a project on your computer by cloning a repository from GitHub.
 > If that option is not present, it probably means that RStudio doesn't know
 > where your Git executable is, and you won't be able to progress further
-> in this lesson until you tell RStudio where it is.
-> ### Find your Git Executiable
+> in this lesson until you tell RStudio where it is.  
+>
+> ### Find your Git Executable
+>
 > First let's make sure that Git is installed on your computer.
 > Open your shell on Mac or Linux, or on Windows open the command prompt
 > and then type:
-> - `which git` (Mac, Linux)
+> - `which git` (macOS, Linux)
 > - `where git` (Windows)
 >
-> If there is no version of Git on your computer,
-please follow the
-[Git installation
-instructions](https://swcarpentry.github.io/git-novice/setup.html)
-> in the setup of this lesson to install Git now. Next open your shell or command prompt
-> and type `which git` (Mac, Linux), or `where git` (Windows).
+> If there is no version of Git on your computer, please follow the 
+> [Git installation instructions](https://swcarpentry.github.io/git-novice/setup.html)
+> in the setup of this lesson to install Git now. Next open your shell or command prompt 
+> and type `which git` (macOS, Linux), or `where git` (Windows).
 > Copy the path to the git executable.
 >
-> e.g. On one Windows computer which had GitHub Desktop installed on it, the path was:
+> On one Windows computer which had GitHub Desktop installed on it, the path was:
 > `C:/Users/UserName/AppData/Local/GitHubDesktop/app-1.1.1/resources/app/git/cmd/git.exe`
 >
 > NOTE: The path on your computer will be somewhat different.
+>
 > ### Tell RStudio where to find GitHub
+>
 > In RStudio, go to the `Tools` menu > `Global Options` > `Git/SVN` and then
-> browse to the git executable you found in the command prompt or shell. Now restart
+> browse to the Git executable you found in the command prompt or shell. Now restart
 > RStudio.
 > Note: Even if you have Git installed, you may need
-> to accept the XCode license if you are using macOS.
+> to accept the Xcode license if you are using macOS.
 {: .callout}
 
 Next, RStudio will ask which existing directory we want to use. Click
@@ -78,7 +80,7 @@ repository. Notice the vertical "Git" menu in the menu bar. RStudio has
 recognized that the current directory is a Git repository, and gives us a
 number of tools to use Git:
 
-![](../fig/RStudio_screenshot_afterclone.png)
+![RStudio window after new project is created with large arrow pointing to vertical Git menu bar.](../fig/RStudio_screenshot_afterclone.png)
 
 To edit the existing files in the repository, we can click on them in the
 "Files" panel on the lower right. Now let's add some additional information
@@ -89,7 +91,7 @@ about Pluto:
 Once we have saved our edited files, we can use RStudio to commit the changes
 by clicking on "Commit..." in the Git menu:
 
-![](../fig/RStudio_screenshot_commit.png)
+![RStudio screenshot showing the Git menu dropdown with "Commit..." selected](../fig/RStudio_screenshot_commit.png)
 
 This will open a dialogue where we can select which files to commit (by
 checking the appropriate boxes in the "Staged" column), and enter a commit
@@ -104,14 +106,14 @@ The changes can be pushed by selecting "Push Branch" from the Git menu. There
 are also options to pull from the remote repository, and to view the commit
 history:
 
-![](../fig/RStudio_screenshot_history.png)
+![RStudio screenshot showing the git menu dropdown with "History" selected](../fig/RStudio_screenshot_history.png)
 
 > ## Are the Push/Pull Commands Grayed Out?
 >
 > Grayed out Push/Pull commands generally mean that RStudio doesn't know the
 > location of your remote repository (e.g. on GitHub). To fix this, open a
 > terminal to the repository and enter the command: `git push -u origin
-> master`. Then restart RStudio.
+> main`. Then restart RStudio.
 {: .callout}
 
 If we click on "History", we can see a graphical version of what `git log`
@@ -123,7 +125,7 @@ RStudio creates a number of files that it uses to keep track of a project. We
 often don't want to track these, in which case we add them to our `.gitignore`
 file:
 
-![](../fig/RStudio_screenshot_gitignore.png)
+![RStudio screenshot showing .gitignore open in the editor pane with the files .Rproj.user, .Rhistory, .RData, and \*.Rproj added to the end](../fig/RStudio_screenshot_gitignore.png)
 
 > ## Tip: versioning disposable output
 >
@@ -144,9 +146,9 @@ file:
 > > ```
 > > dir.create("./graphs")
 > > ```
-> > Then open up the `.gitignore` file from the righ-hand panel of Rstudio and add
+> > {: .language-r}
+> > Then open up the `.gitignore` file from the right-hand panel of Rstudio and add 
 > > `graphs/` to the list of files to ignore.
-> > {: . shell}
 > {: .solution}
 {: .challenge}
 

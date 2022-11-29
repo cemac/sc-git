@@ -34,7 +34,7 @@ Courtesy NASA/JPL-Caltech.
 
 
 
-First, let's create a directory in `Desktop` folder for our work and then move into that directory:
+First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
 ~~~
 $ cd ~/Desktop
@@ -53,7 +53,7 @@ $ git init
 {: .language-bash}
 
 It is important to note that `git init` will create a repository that
-includes subdirectories and their files---there is no need to create
+can include subdirectories and their files---there is no need to create
 separate repositories nested within the `planets` repository, whether
 subdirectories are present from the beginning or added later. Also, note
 that the creation of the `planets` directory and its initialization as a
@@ -80,18 +80,18 @@ $ ls -a
 ~~~
 {: .output}
 
-Git uses this special subdirectory to store all the information about the project,
-including all files and sub-directories located within the project's directory.
+Git uses this special subdirectory to store all the information about the project, 
+including the tracked files and sub-directories located within the project's directory.
 If we ever delete the `.git` subdirectory,
 we will lose the project's history.
 
 Next, we will change the default branch to be called `main`.
 This might be the default branch depending on your settings and version
 of git.
-See the [setup episode](02-setup.md) for more information on this change.
+See the [setup episode]({{ page.root }}{% link _episodes/02-setup.md %}) for more information on this change.
 
 ~~~
-git checkout -b main
+$ git checkout -b main
 ~~~
 {: .language-bash}
 ~~~
@@ -142,9 +142,9 @@ wording of the output might be slightly different.
 >
 > > ## Solution
 > >
-> > No. Dracula does not need to make the `moons` subdirectory a Git repository
-> > because the `planets` repository will track all files, sub-directories, and
-> > subdirectory files under the `planets` directory.  Thus, in order to track
+> > No. Dracula does not need to make the `moons` subdirectory a Git repository 
+> > because the `planets` repository can track any files, sub-directories, and 
+> > subdirectory files under the `planets` directory.  Thus, in order to track 
 > > all information about moons, Dracula only needed to add the `moons` subdirectory
 > > to the `planets` directory.
 > >
@@ -174,8 +174,8 @@ wording of the output might be slightly different.
 > > ## Solution -- USE WITH CAUTION!
 > >
 > > ### Background
-> > Removing files from a Git repository needs to be done with caution. But we have not learned
-> > yet how to tell Git to track a particular file; we will learn this in the next episode. Files
+> > Removing files from a Git repository needs to be done with caution. But we have not learned 
+> > yet how to tell Git to track a particular file; we will learn this in the next episode. Files 
 > > that are not tracked by Git can easily be removed like any other "ordinary" files with
 > > ~~~
 > > $ rm filename
@@ -183,7 +183,7 @@ wording of the output might be slightly different.
 > > {: .language-bash}
 > >
 > > Similarly a directory can be removed using `rm -r dirname` or `rm -rf dirname`.
-> > If the files or folder being removed in this fashion are tracked by Git, then their removal
+> > If the files or folder being removed in this fashion are tracked by Git, then their removal 
 > > becomes another change that we will need to track, as we will see in the next episode.
 > >
 > > ### Solution

@@ -29,7 +29,10 @@ If you don't already have a GitHub account, you can register for an account at
 [https://github.com/join](https://github.com/join).
 
 Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
+world. To this end we are going to create a *remote* repository that will be linked to our *local* repository.
+
+## 1. Create a remote repository
+Log in to [GitHub](https://github.com), then click on the icon in the top right corner to
 create a new repository called `planets`:
 
 ![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
@@ -70,9 +73,10 @@ Now that we have two repositories, we need a diagram like this:
 Note that our local repository still contains our earlier work on `mars.txt`, but the
 remote repository on GitHub appears empty as it doesn't contain any files yet.
 
-The next step is to connect the two repositories.  We do this by making the
+## 2. Connect local to remote repository
+Now we connect the two repositories.  We do this by making the
 GitHub repository a [remote]({{ page.root}}{% link reference.md %}#remote) for the local repository.
-The home page of the repository on GitHub includes the string we need to
+The home page of the repository on GitHub includes the URL string we need to
 identify it:
 
 ![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
@@ -81,10 +85,10 @@ Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link referenc
 
 > ## HTTPS vs. SSH
 >
-> We use SSH here because, while it requires some additional configuration, it is a
-> security protocol widely used by many applications.  The steps below describe SSH at a
-> minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup
-> and concepts of SSH and key pairs, and other material supplemental to git related SSH.
+> We use SSH here because, while it requires some additional configuration, it is a 
+> security protocol widely used by many applications.  The steps below describe SSH at a 
+> minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup 
+> and concepts of SSH and key pairs, and other material supplemental to git related SSH. 
 {: .callout}
 
 ![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
@@ -120,26 +124,26 @@ origin   git@github.com:vlad/planets.git (push)
 We'll discuss remotes in more detail in the next episode, while
 talking about how they might be used for collaboration.
 
-## SSH Background and Setup
-Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository.
+## 3. SSH Background and Setup
+Before Dracula can connect to a remote repository, he needs to set up a way for his computer to authenticate with GitHub so it knows it’s him trying to connect to his remote repository. 
 
-We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
+We are going to set up the method that is commonly used by many different services to authenticate access on the command line.  This method is called Secure Shell Protocol (SSH).  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.  
 
 SSH uses what is called a key pair. This is two keys that work together to validate access. One key is publicly known and called the public key, and the other key called the private key is kept private. Very descriptive names.
 
-You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”
+You can think of the public key as a padlock, and only you have the key (the private key) to open it. You use the public key where you want a secure method of communication, such as your GitHub account.  You give this padlock, or public key, to GitHub and say “lock the communications to my account with this so that only computers that have my private key can unlock communications and send git commands as my GitHub account.”  
 
 What we will do now is the minimum required to set up the SSH keys and add the public key to a GitHub account.
 
 > ## Advanced SSH
-> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail.
+> A supplemental episode in this lesson discusses SSH and key pairs in more depth and detail. 
 {: .callout}
 
-The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it.
+The first thing we are going to do is check if this has already been done on the computer you’re on.  Because generally speaking, this setup only needs to happen once and then you can forget about it. 
 
 > ## Keeping your keys secure
-> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
->  practice to audit your secure shell keys every so often. Especially if you are using multiple
+> You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good 
+>  practice to audit your secure shell keys every so often. Especially if you are using multiple 
 >  computers to access your account.
 {: .callout}
 
@@ -150,18 +154,20 @@ ls -al ~/.ssh
 ~~~
 {: .language-bash}
 
-Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using.
+Your output is going to look a little different depending on whether or not SSH has ever been set up on the computer you are using. 
 
-Dracula has not set up SSH on his computer, so his output is
+Dracula has not set up SSH on his computer, so his output is 
 
 ~~~
 ls: cannot access '/c/Users/Vlad Dracula/.ssh': No such file or directory
 ~~~
 {: .output}
 
-If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.
+If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.  
+Since they don’t exist on Dracula’s computer, he uses this command to create them. 
 
-Since they don’t exist on Dracula’s computer, he uses this command to create them:
+### 3.1 Create an SSH key pair
+To create an SSH key pair Vlad uses this command, where the `-t` option specifies which type of algorithm to use and `-C` attaches a comment to the key (here, Vlad's email):  
 
 ~~~
 $ ssh-keygen -t ed25519 -C "vlad@tran.sylvan.ia"
@@ -185,7 +191,7 @@ Enter passphrase (empty for no passphrase):
 ~~~
 {: .output}
 
-Now, it is prompting Dracula for a passphrase.  Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option.
+Now, it is prompting Dracula for a passphrase.  Since he is using his lab’s laptop that other people sometimes have access to, he wants to create a passphrase.  Be sure to use something memorable or save your passphrase somewhere, as there is no "reset my password" option. 
 
 ~~~
 Enter same passphrase again:
@@ -214,7 +220,7 @@ The key's randomart image is:
 ~~~
 {: .output}
 
-The "identification" is actually the private key. You should never share it.  The public key is appropriately named.  The "key fingerprint"
+The "identification" is actually the private key. You should never share it.  The public key is appropriately named.  The "key fingerprint" 
 is a shorter version of a public key.
 
 Now that we have generated the SSH keys, we will find the SSH files when we check.
@@ -232,7 +238,8 @@ drwxr-xr-x 1 Vlad Dracula 197121   0 Jul 16 14:48 ../
 ~~~
 {: .output}
 
-Now we run the command to check if GitHub can read our authentication.
+### 3.2 Copy the public key to GitHub
+Now we have a SSH key pair and we can run this command to check if GitHub can read our authentication.  
 
 ~~~
 ssh -T git@github.com
@@ -251,9 +258,9 @@ git@github.com: Permission denied (publickey).
 ~~~
 {: .output}
 
-Right, we forgot that we need to give GitHub our public key!
+Right, we forgot that we need to give GitHub our public key!  
 
-First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key.
+First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key. 
 
 ~~~
 cat ~/.ssh/id_ed25519.pub
@@ -265,12 +272,12 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmRA3d51X0uu9wXek559gfn6UFNF69yZjChyBIU2qKI
 ~~~
 {: .output}
 
-Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the
-settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now,
+Now, going to GitHub.com, click on your profile icon in the top right corner to get the drop-down menu.  Click "Settings," then on the 
+settings page, click "SSH and GPG keys," on the left side "Account settings" menu.  Click the "New SSH key" button on the right side. Now, 
 you can add the title (Dracula uses the title "Vlad's Lab Laptop" so he can remember where the original key pair
 files are located), paste your SSH key into the field, and click the "Add SSH key" to complete the setup.
 
-Now that we’ve set that up, let’s check our authentication again from the command line.
+Now that we’ve set that up, let’s check our authentication again from the command line. 
 ~~~
 $ ssh -T git@github.com
 ~~~
@@ -281,7 +288,9 @@ Hi Vlad! You've successfully authenticated, but GitHub does not provide shell ac
 ~~~
 {: .output}
 
-## Push local changes to a remote
+Good! This output confirms that the SSH key works as intended. We are now ready to push our work to the remote repository.
+
+## 4. Push local changes to a remote
 
 Now that authentication is setup, we can return to the remote.  This command will push the changes from
 our local repository to the repository on GitHub:
@@ -291,8 +300,8 @@ $ git push origin main
 ~~~
 {: .language-bash}
 
-Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it
-will not prompt for a passphrase.
+Since Dracula set up a passphrase, it will prompt him for it.  If you completed advanced settings for your authentication, it 
+will not prompt for a passphrase. 
 
 ~~~
 Enumerating objects: 16, done.
@@ -452,8 +461,8 @@ GitHub, though, this command would download them to our local repository.
 
 > ## GitHub License and README files
 >
-> In this episode we learned about creating a remote repository on GitHub, but when you initialized
-> your GitHub repo, you didn't add a README.md or a license file. If you had, what do you think
+> In this episode we learned about creating a remote repository on GitHub, but when you initialized 
+> your GitHub repo, you didn't add a README.md or a license file. If you had, what do you think 
 > would have happened when you tried to link your local and remote repositories?
 >
 > > ## Solution

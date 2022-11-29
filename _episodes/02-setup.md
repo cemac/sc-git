@@ -37,7 +37,7 @@ which means that any changes pushed to
 another Git host server
 after this lesson will include this information.
 
-For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy].
+For this lesson, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
 
 >## Keeping your email private
 >
@@ -47,7 +47,7 @@ For this lesson, we will be interacting with [GitHub](https://github.com/) and s
 
 > ## Line Endings
 >
-> As with other keys, when you hit <kbd>Return</kbd> on your keyboard,
+> As with other keys, when you hit <kbd>Enter</kbd> or <kbd>↵</kbd> or on Macs, <kbd>Return</kbd> on your keyboard,
 > your computer encodes this input as a character.
 > Different operating systems use different character(s) to represent the end of a line.
 > (You may also hear these referred to as newlines or line breaks.)
@@ -70,10 +70,10 @@ For this lesson, we will be interacting with [GitHub](https://github.com/) and s
 > And on Windows:
 >
 > ~~~
-> $ git config --global core.autocrlf true
+> $ git config --global core.autocrlf false
 > ~~~
 > {: .language-bash}
->
+> 
 {: .callout}
 
 Dracula also has to set his favorite text editor, following this table:
@@ -101,13 +101,13 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 > ## Exiting Vim
 >
 > Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving
-your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Return</kbd>.
-> If you want to save your changes and quit, press <kbd>Esc</kbd> then type `:wq` and hit <kbd>Return</kbd>.
+your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Enter</kbd> or <kbd>↵</kbd> or on Macs, <kbd>Return</kbd>.
+> If you want to save your changes and quit, press <kbd>Esc</kbd> then type `:wq` and hit <kbd>Enter</kbd> or <kbd>↵</kbd> or on Macs, <kbd>Return</kbd>.
 {: .callout}
 
 Git (2.28+) allows configuration of the name of the branch created when you
-initialize any new repository.  Dracula decides to use that feature to set it to `main` so
-it matches the cloud service he will eventually use.
+initialize any new repository.  Dracula decides to use that feature to set it to `main` so 
+it matches the cloud service he will eventually use. 
 
 ~~~
 $ git config --global init.defaultBranch main
@@ -116,21 +116,21 @@ $ git config --global init.defaultBranch main
 
 > ## Default Git branch naming
 >
-> Source file changes are associated with a "branch."
-> For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.
-> By default, Git will create a branch called `master`
-> when you create a new repository with `git init` (as explained in the next Episode). This term evokes
-> the racist practice of human slavery and the
-> [software development community](https://github.com/github/renaming)  has moved to adopt
-> more inclusive language.
->
-> In 2020, most Git code hosting services transitioned to using `main` as the default
-> branch. As an example, any new repository that is opened in GitHub and GitLab default
-> to `main`.  However, Git has not yet made the same change.  As a result, local repositories
-> must be manually configured have the same main branch name as most cloud services.
->
-> For versions of Git prior to 2.28, the change can be made on an individual repository level.  The
-> command for this is in the next episode.  Note that if this value is unset in your local Git
+> Source file changes are associated with a "branch." 
+> For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.  
+> By default, Git will create a branch called `master` 
+> when you create a new repository with `git init` (as explained in the next Episode). This term evokes 
+> the racist practice of human slavery and the 
+> [software development community](https://github.com/github/renaming)  has moved to adopt 
+> more inclusive language. 
+> 
+> In 2020, most Git code hosting services transitioned to using `main` as the default 
+> branch. As an example, any new repository that is opened in GitHub and GitLab default 
+> to `main`.  However, Git has not yet made the same change.  As a result, local repositories 
+> must be manually configured have the same main branch name as most cloud services.  
+> 
+> For versions of Git prior to 2.28, the change can be made on an individual repository level.  The 
+> command for this is in the next episode.  Note that if this value is unset in your local Git 
 > configuration, the `init.defaultBranch` value defaults to `master`.
 >
 {: .callout}

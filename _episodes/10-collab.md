@@ -25,24 +25,27 @@ play Owner and Collaborator.
 > won't need to give anyone access on GitHub, because both 'partners' are you.
 {: .callout}
 
-The Owner needs to give the Collaborator access. On GitHub, click the settings
-button on the right, select Manage access, click Invite a collaborator, and
+The Owner needs to give the Collaborator access. On GitHub, click the "Settings"
+button on the right, select "Collaborators", click "Add people", and
 then enter your partner's username.
 
 ![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
 
 To accept access to the Owner's repo, the Collaborator
-needs to go to [https://github.com/notifications](https://github.com/notifications).
-Once there she can accept access to the Owner's repo.
+needs to go to [https://github.com/notifications](https://github.com/notifications) 
+or check for email notification. Once there she can accept access to the Owner's repo.
 
 Next, the Collaborator needs to download a copy of the Owner's repository to her
-machine. This is called "cloning a repo".
+machine. This is called "cloning a repo". 
 
-To clone the Owner's repo into
-her `Desktop` folder, the Collaborator enters:
+The Collaborator doesn't want to overwrite her own version of `planets.git`, so 
+needs to clone the Owner's repository to a different location than her own 
+repository with the same name.
+ 
+To clone the Owner's repo into her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone git@github.com:vlad/planets.git ~/Desktop/vlad-planets
 ~~~
 {: .language-bash}
 
@@ -105,7 +108,7 @@ Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice earlier when we were setting up remotes by hand.)
 
-Take a look at the Owner’s repository on GitHub again, and you should be
+Take a look at the Owner’s repository on GitHub again, and you should be 
 able to see the new commit made by the Collaborator. You may need to refresh
 your browser to see the new commit.
 
@@ -211,10 +214,10 @@ GitHub) are back in sync.
 > The Collaborator has some questions about one line change made by the Owner and
 > has some suggestions to propose.
 >
-> With GitHub, it is possible to comment the diff of a commit. Over the line of
+> With GitHub, it is possible to comment on the diff of a commit. Over the line of
 > code to comment, a blue comment icon appears to open a comment window.
 >
-> The Collaborator posts its comments and suggestions using GitHub interface.
+> The Collaborator posts her comments and suggestions using the GitHub interface.
 {: .challenge}
 
 > ## Version History, Backup, and Version Control

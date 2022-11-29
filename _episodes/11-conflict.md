@@ -538,11 +538,11 @@ Conflicts can also be minimized with project management strategies:
 > >
 > > |order|action . . . . . . |command . . . . . . . . . . . . . . . . . . . |
 > > |-----|-------------------|----------------------------------------------|
-> > |1    | Update local      | `git pull origin main`                       |
+> > |1    | Update local      | `git pull origin main`                     |
 > > |2    | Make changes      | `echo 100 >> numbers.txt`                    |
 > > |3    | Stage changes     | `git add numbers.txt`                        |
 > > |4    | Commit changes    | `git commit -m "Add 100 to numbers.txt"`     |
-> > |5    | Update remote     | `git push origin main`                       |
+> > |5    | Update remote     | `git push origin main`                     |
 > > |6    | Celebrate!        | `AFK`                                        |
 > >
 > {: .solution}
