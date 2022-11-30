@@ -48,7 +48,7 @@ to be shared can and should be stored in a version control system.
 
 > ## Prerequisites
 >
-> 1. Please make sure you have [installed any required software](https://carpentries.github.io/workshop-template/#git)
+> 1. Please make sure you have [installed any required software][install_software]
 >
 > 2. If you don't already have a GitHub account, you can register at [https://github.com/join](https://github.com/join)
 >
@@ -56,3 +56,5 @@ to be shared can and should be stored in a version control system.
 > Some previous experience with the shell is expected,
 > *but isn't mandatory*.
 {: .prereq}
+
+[install_software]: {{ page.root }}{% link setup.md %}#install-software
