@@ -162,6 +162,31 @@ Automatic merge failed; fix conflicts and then commit the result.
 ~~~
 {: .output}
 
+With more recent versions of git, the `git pull` command may produce an error similar to this:
+
+~~~
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+~~~
+{: .output}
+
+We can set the default option to be the same as previous versions of git with:
+
+~~~
+$ git config --global pull.rebase false
+~~~
+{: .language-bash}
+
 The `git pull` command updates the local repository to include those
 changes already included in the remote repository.
 After the changes from remote branch have been fetched, Git detects that changes made to the local copy
