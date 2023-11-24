@@ -1,5 +1,5 @@
 ---
-title: "Supplemental: Using Git from RStudio and other software"
+title: "Supplemental: Using Git from RStudio"
 teaching: 10
 exercises: 0
 questions:
