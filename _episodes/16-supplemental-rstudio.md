@@ -3,11 +3,11 @@ title: "Supplemental: Using Git from RStudio and other software"
 teaching: 10
 exercises: 0
 questions:
-- "How can I use Git with RStudio and other software?"
+- "How can I use Git with RStudio?"
 objectives:
-- "Understand how to use Git from RStudio and other software."
+- "Understand how to use Git from RStudio"
 keypoints:
-- "Using RStudio and other software's Git integration allows you to version control a project over time."
+- "Using RStudio's Git integration allows you to version control a project over time."
 ---
 
 ### RStudio
@@ -157,40 +157,3 @@ enough to get you started!
 
 [rstudio]: https://www.rstudio.com/
 [rstudio-projects]: https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects
-
-### Matlab
-
-[Matlab](https://www.mathworks.com/products/matlab.html) includes Git
-integration, allowing changes to be committed and synchronised with remote
-repositories through the *Current Folder* window.
-
-![](../fig/matlab_source_control.jpg)
-
-Further documentation can be found on these Matlab web pages:
-
-- [set up git source control](https://www.mathworks.com/help/matlab/matlab_prog/set-up-git-source-control.html)
-- [push and fetch files with git](https://www.mathworks.com/help/simulink/ug/push-and-fetch-files-with-git.html)
-
-### Atom
-
-[Atom](https://atom.io/) is a popular text editor, created by GitHub, which includes Git integration.
-
-![](../fig/atom_github_stage.png)
-
-Further documentation can be found on these web pages:
-
-- [Atom GitHub package/](https://flight-manual.atom.io/using-atom/sections/github-package/)
-
-### Visual Studio Code
-
-Microsoft's [Visual Studio Code](https://code.visualstudio.com/) editor is quite similar to Atom, and also includes suport for [version control](https://code.visualstudio.com/docs/editor/versioncontrol)
-
-### Python
-
-The popular Python IDE [Spyder](https://www.spyder-ide.org/) does not currently
-include Git integration, but this may be added in the future.
-
-[PyCharm](https://www.jetbrains.com/pycharm/) is an alternative graphical
-development environment for Python which does include Git integration. Further
-details can be found
-[here](https://www.jetbrains.com/help/pycharm/using-git-integration.html).
