@@ -70,7 +70,7 @@ For this lesson, we will be interacting with [GitHub](https://github.com/) and s
 > And on Windows:
 >
 > ~~~
-> $ git config --global core.autocrlf false
+> $ git config --global core.autocrlf true
 > ~~~
 > {: .language-bash}
 > 
@@ -137,6 +137,13 @@ $ git config --global init.defaultBranch main
 
 The five commands we just ran above only need to be run once: the flag `--global` tells Git
 to use the settings for every project, in your user account, on this computer.
+
+Let's review those settings and test our `core.editor` right away:
+
+~~~
+$ git config --global --edit
+~~~
+{: .language-bash}
 
 You can check your settings at any time:
 
