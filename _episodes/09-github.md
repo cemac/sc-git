@@ -88,7 +88,9 @@ Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link referenc
 > We use SSH here because, while it requires some additional configuration, it is a 
 > security protocol widely used by many applications.  The steps below describe SSH at a 
 > minimum level for GitHub. A supplemental episode to this lesson discusses advanced setup 
-> and concepts of SSH and key pairs, and other material supplemental to git related SSH. 
+> and concepts of SSH and key pairs, and other material supplemental to git related SSH:
+>
+> [Working remotely](https://carpentries-incubator.github.io/shell-extras/02-ssh/index.html)
 {: .callout}
 
 ![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
