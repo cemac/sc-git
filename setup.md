@@ -22,19 +22,36 @@ the desktop.
 
 ### Apple MacOS
 
-For MacOS, install Git for Mac by downloading and running the most recent "mavericks" installer from
-[this list][git_macos].
+For MacOS, open the Terminal app and type:
 
-Because this installer is not signed by the developer, you may have to right click
-(control click) on the .pkg file, click Open, and click Open on the pop up window.
+~~~
+git --version
+~~~
+{: .language-bash}
 
-After installing Git, there will not be anything in your `/Applications` folder, as Git is a command
-line program. For older versions of OS X (10.5-10.8) use the most recent available installer
-labelled "snow-leopard" available [here][git_macos].
+then press Enter / Return. If this produces output similar to:
+
+~~~
+$ git --version
+git version 2.47.1
+~~~
+{: .language-bash}
+
+Git is already installed.
+
+If Git is not available follow the instructions to install the "command line developer tools".
+*Do not* click "Get Xcode", because that will take too long and is not necessary for our session.
+
+After installing these tools, there won't be anything in your /Applications folder, as they and Git
+are command line programs.
+
+For older versions of OS X (10.5-10.8) use the most recent available installer labelled
+"snow-leopard" available [here][git_macos].
 
 ### Linux
 
 If Git is not already available on your machine you can try to install it via your package manager.
+
 For Debian/Ubuntu run `sudo apt-get install git` and for Fedora run `sudo dnf install git`.
 
 ### Additional installation notes
