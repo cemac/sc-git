@@ -1,6 +1,6 @@
 ---
 title: "Supplemental: Using Git from RStudio"
-teaching: 10
+teaching: 0
 exercises: 0
 questions:
 - "How can I use Git with RStudio?"
